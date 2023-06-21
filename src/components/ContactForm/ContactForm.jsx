@@ -31,7 +31,7 @@ const ContactForm = () => {
     if (contacts.find(item => item.name.toLowerCase() === name.toLowerCase())) {
       return alert(`Contact "${name}" is already in contacts list`);
     }
-    dispatch(addContact({ id: nanoid(), name, number }));
+    dispatch(addContact({ id: nanoid(), name, phone: number }));
     form.reset();
   };
 
